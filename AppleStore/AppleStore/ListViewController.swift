@@ -11,6 +11,7 @@ import UIKit
 class ListViewController: UITableViewController {
     
     let kProductCellIdentifier = "ProductCell"
+    let kShowDetailsSegue = "ShowDetails"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,15 +24,20 @@ class ListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(kProductCellIdentifier) as! ProductCell
         
         let product = ProductRepo.getProducts()[indexPath.row]
-        
-        cell.title.text = product.name
-        cell.price.text = product.price
-        cell.metaInfo.text = product.meta
-        return cell
+        cell.setProduct(product)
+         return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ProductRepo.getProducts().count
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == kShowDetailsSegue {
+            let destination = segue.destinationViewController as! DetailViewController
+            destination.selectedProduct = ProductRepo.getProducts()[self.tableView.indexPathForSelectedRow!.row]
+
+        }
     }
 }
 

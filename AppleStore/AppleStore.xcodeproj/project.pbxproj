@@ -17,6 +17,7 @@
 		B10B94731CF4E97500BD7194 /* ProductRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10B946F1CF4E97500BD7194 /* ProductRepo.swift */; };
 		B10B94741CF4E97500BD7194 /* apple-products.json in Resources */ = {isa = PBXBuildFile; fileRef = B10B94711CF4E97500BD7194 /* apple-products.json */; };
 		B191117C1CF5E264004F671F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B191117B1CF5E264004F671F /* ProductCell.swift */; };
+		B1AAE8671CF5EA6000F5CB05 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AAE8661CF5EA6000F5CB05 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		B10B946F1CF4E97500BD7194 /* ProductRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductRepo.swift; sourceTree = "<group>"; };
 		B10B94711CF4E97500BD7194 /* apple-products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apple-products.json"; sourceTree = "<group>"; };
 		B191117B1CF5E264004F671F /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		B1AAE8661CF5EA6000F5CB05 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				B10B94451CF4DB1200BD7194 /* AppDelegate.swift */,
 				B10B94651CF4DCA500BD7194 /* ListViewController.swift */,
+				B1AAE8661CF5EA6000F5CB05 /* DetailViewController.swift */,
 				B10B946E1CF4E97500BD7194 /* Product.swift */,
 				B10B946F1CF4E97500BD7194 /* ProductRepo.swift */,
 				B191117B1CF5E264004F671F /* ProductCell.swift */,
@@ -221,6 +224,7 @@
 				B10B94461CF4DB1200BD7194 /* AppDelegate.swift in Sources */,
 				B10B94661CF4DCA500BD7194 /* ListViewController.swift in Sources */,
 				B191117C1CF5E264004F671F /* ProductCell.swift in Sources */,
+				B1AAE8671CF5EA6000F5CB05 /* DetailViewController.swift in Sources */,
 				B10B94721CF4E97500BD7194 /* Product.swift in Sources */,
 				B10B94731CF4E97500BD7194 /* ProductRepo.swift in Sources */,
 			);

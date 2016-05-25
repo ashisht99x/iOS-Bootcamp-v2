@@ -15,4 +15,10 @@ class ProductCell: UITableViewCell {
     @IBOutlet weak var price: UILabel!
     
     @IBOutlet weak var metaInfo: UILabel!
+    
+    func setProduct(product: Product) {
+        self.title.text = product.name
+        self.price.text = product.price
+        self.metaInfo.text = product.meta
+    }
 }
