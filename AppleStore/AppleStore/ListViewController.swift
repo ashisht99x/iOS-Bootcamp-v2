@@ -14,6 +14,8 @@ class ListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 60
         // Do any additional setup after loading the view, typically from a nib.
     }
 
