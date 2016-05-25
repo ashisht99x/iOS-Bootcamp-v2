@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -26,19 +27,67 @@
         <!--List View Controller-->
         <scene sceneID="stC-9X-GFo">
             <objects>
-                <tableViewController id="5p2-rW-AvU" customClass="ListViewController" customModule="Apple_Store" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bhf-Xu-1Ow">
+                <tableViewController id="5p2-rW-AvU" customClass="ListViewController" customModule="AppleStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" id="bhf-Xu-1Ow">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Euy-5R-I6j">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="101" id="Euy-5R-I6j" customClass="ProductCell" customModule="AppleStore" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="101"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Euy-5R-I6j" id="kRL-ls-UsI">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="100.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPm-Nc-hSm">
+                                            <rect key="frame" x="18" y="8" width="45.5" height="21"/>
+                                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hW-8l-K07">
+                                            <rect key="frame" x="18" y="37" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXv-8v-vAR">
+                                            <rect key="frame" x="18" y="66" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="NXv-8v-vAR" secondAttribute="trailing" constant="10" id="5c6-JX-cMt"/>
+                                        <constraint firstItem="JPm-Nc-hSm" firstAttribute="top" secondItem="kRL-ls-UsI" secondAttribute="topMargin" id="9OC-J1-Wk0"/>
+                                        <constraint firstItem="3hW-8l-K07" firstAttribute="top" secondItem="JPm-Nc-hSm" secondAttribute="bottom" constant="8" id="9uV-03-qCp"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="NXv-8v-vAR" secondAttribute="bottom" constant="5.5" id="Cqb-xd-vxT"/>
+                                        <constraint firstItem="NXv-8v-vAR" firstAttribute="leading" secondItem="3hW-8l-K07" secondAttribute="leading" id="ISK-gD-Vpj"/>
+                                        <constraint firstItem="3hW-8l-K07" firstAttribute="leading" secondItem="JPm-Nc-hSm" secondAttribute="leading" id="Wh1-Fj-lpr"/>
+                                        <constraint firstItem="NXv-8v-vAR" firstAttribute="top" secondItem="3hW-8l-K07" secondAttribute="bottom" constant="8" id="qZ3-no-gI2"/>
+                                        <constraint firstItem="JPm-Nc-hSm" firstAttribute="leading" secondItem="kRL-ls-UsI" secondAttribute="leadingMargin" constant="10" id="rv8-Aq-k90"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Cqb-xd-vxT"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3hW-8l-K07" secondAttribute="bottom" constant="10" id="LeY-kD-Fyy"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LeY-kD-Fyy"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="metaInfo" destination="NXv-8v-vAR" id="2To-Hw-8pL"/>
+                                    <outlet property="price" destination="3hW-8l-K07" id="Iz1-kh-AHL"/>
+                                    <outlet property="title" destination="JPm-Nc-hSm" id="eaX-xO-353"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

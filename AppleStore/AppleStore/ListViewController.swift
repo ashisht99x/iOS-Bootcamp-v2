@@ -18,13 +18,13 @@ class ListViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: kProductCellIdentifier) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(kProductCellIdentifier) as! ProductCell
         
         let product = ProductRepo.getProducts()[indexPath.row]
         
-        cell.textLabel?.text = product.name
-        cell.detailTextLabel?.text = product.price
-
+        cell.title.text = product.name
+        cell.price.text = product.price
+        cell.metaInfo.text = product.meta
         return cell
     }
     

@@ -9,7 +9,6 @@ class Product {
     let detailText : String
     let fullImageURL : String
     let meta : String
-    var isFavourite : Bool
     
     var thumbnailImage : UIImage? {
         get {
@@ -24,6 +23,5 @@ class Product {
         self.meta = meta
         self.thumbnailImageName = tName
         self.fullImageURL = fName
-        self.isFavourite = false
     }
 }
