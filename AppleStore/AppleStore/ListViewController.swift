@@ -19,15 +19,17 @@ class ListViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: kProductCellIdentifier) as UITableViewCell
-        cell.textLabel?.text = "Hello World"
-        cell.detailTextLabel?.text
-            = "Welcome To Apple Store"
+        
+        let product = ProductRepo.getProducts()[indexPath.row]
+        
+        cell.textLabel?.text = product.name
+        cell.detailTextLabel?.text = product.price
 
         return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1;
+        return ProductRepo.getProducts().count
     }
 }
 

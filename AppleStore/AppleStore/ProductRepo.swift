@@ -14,7 +14,8 @@ class ProductRepo: NSObject {
             price: aProductDict["price"]!,
             detailText: aProductDict["detail"]!,
             thumbnailImageName: aProductDict["thumbnailImage"]!,
-            fullImageName: aProductDict["fullImage"]!)
+            fullImageName: aProductDict["fullImage"]!,
+                meta: aProductDict["meta"]!)
         }
     }
    

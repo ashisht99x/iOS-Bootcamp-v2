@@ -13,6 +13,9 @@
 		B10B94501CF4DB1200BD7194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10B944E1CF4DB1200BD7194 /* LaunchScreen.storyboard */; };
 		B10B945B1CF4DB1200BD7194 /* AppleStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10B945A1CF4DB1200BD7194 /* AppleStoreTests.swift */; };
 		B10B94661CF4DCA500BD7194 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10B94651CF4DCA500BD7194 /* ListViewController.swift */; };
+		B10B94721CF4E97500BD7194 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10B946E1CF4E97500BD7194 /* Product.swift */; };
+		B10B94731CF4E97500BD7194 /* ProductRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10B946F1CF4E97500BD7194 /* ProductRepo.swift */; };
+		B10B94741CF4E97500BD7194 /* apple-products.json in Resources */ = {isa = PBXBuildFile; fileRef = B10B94711CF4E97500BD7194 /* apple-products.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		B10B945A1CF4DB1200BD7194 /* AppleStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStoreTests.swift; sourceTree = "<group>"; };
 		B10B945C1CF4DB1200BD7194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B10B94651CF4DCA500BD7194 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		B10B946E1CF4E97500BD7194 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		B10B946F1CF4E97500BD7194 /* ProductRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductRepo.swift; sourceTree = "<group>"; };
+		B10B94711CF4E97500BD7194 /* apple-products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apple-products.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,9 @@
 			children = (
 				B10B94451CF4DB1200BD7194 /* AppDelegate.swift */,
 				B10B94651CF4DCA500BD7194 /* ListViewController.swift */,
+				B10B946E1CF4E97500BD7194 /* Product.swift */,
+				B10B946F1CF4E97500BD7194 /* ProductRepo.swift */,
+				B10B94701CF4E97500BD7194 /* Resources */,
 				B10B94491CF4DB1200BD7194 /* Main.storyboard */,
 				B10B944C1CF4DB1200BD7194 /* Assets.xcassets */,
 				B10B944E1CF4DB1200BD7194 /* LaunchScreen.storyboard */,
@@ -94,6 +103,14 @@
 				B10B945C1CF4DB1200BD7194 /* Info.plist */,
 			);
 			path = AppleStoreTests;
+			sourceTree = "<group>";
+		};
+		B10B94701CF4E97500BD7194 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B10B94711CF4E97500BD7194 /* apple-products.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +196,7 @@
 			files = (
 				B10B94501CF4DB1200BD7194 /* LaunchScreen.storyboard in Resources */,
 				B10B944D1CF4DB1200BD7194 /* Assets.xcassets in Resources */,
+				B10B94741CF4E97500BD7194 /* apple-products.json in Resources */,
 				B10B944B1CF4DB1200BD7194 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +217,8 @@
 			files = (
 				B10B94461CF4DB1200BD7194 /* AppDelegate.swift in Sources */,
 				B10B94661CF4DCA500BD7194 /* ListViewController.swift in Sources */,
+				B10B94721CF4E97500BD7194 /* Product.swift in Sources */,
+				B10B94731CF4E97500BD7194 /* ProductRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +408,7 @@
 				B10B94611CF4DB1200BD7194 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B10B94621CF4DB1200BD7194 /* Build configuration list for PBXNativeTarget "AppleStoreTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +417,7 @@
 				B10B94641CF4DB1200BD7194 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
