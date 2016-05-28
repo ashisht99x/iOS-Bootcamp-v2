@@ -8,19 +8,20 @@ class Product {
     let price : String
     let detailText : String
     let fullImageURL : String
-    var isFavourite : Bool
+    let meta : String
     
-    var thumbnailImage : UIImage? { get{
-        return UIImage(named: thumbnailImageName)
+    var thumbnailImage : UIImage? {
+        get {
+            return UIImage(named: thumbnailImageName)
         }
     }
     
-    init(name: String, price: String, detailText: String,thumbnailImageName tName: String, fullImageName fName: String){
+    init(name: String, price: String, detailText: String,thumbnailImageName tName: String, fullImageName fName: String, meta: String){
         self.name = name
         self.price = price
         self.detailText = detailText
-        thumbnailImageName = tName
-        fullImageURL = fName
-        self.isFavourite = false
+        self.meta = meta
+        self.thumbnailImageName = tName
+        self.fullImageURL = fName
     }
 }
